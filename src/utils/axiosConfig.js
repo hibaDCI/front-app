@@ -9,12 +9,12 @@ console.log("node_env", process.env.NODE_ENV);
 const url =
   process.env.NODE_ENV === "development"
     ? "http://localhost:5000"
-    : "https://superuser.onrender.com";
+    : "https://superuser-api.onrender.com";
 
 axiosApiInstance.defaults.baseURL = url;
 // axiosApiInstance.defaults.baseURL = "http://localhost:5000";
 // setting up access control equel true
-// axiosApiInstance.defaults.withCredentials = true;
+axiosApiInstance.defaults.withCredentials = true;
 export default axiosApiInstance;
 
 // how to specify when to use localhost and when to use the domain name
